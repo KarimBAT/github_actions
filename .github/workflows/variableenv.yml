@@ -3,14 +3,14 @@ name: salutation sur un jour quelconque
 on: workflow_dispatch
 
 env:
- DAY: $DAY_OF_WEEK ## Variable d'environnement pour l'ensemble du flux de travail
+ DAY:  ${{ vars.DAY_OF_WEEK }} ## Variable d'environnement pour l'ensemble du flux de travail
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
     env:
-     Popp: $Greeting
+     Popp:  ${{ vars.Greeting }}
     steps:
       - name: "Dites Salut Push nous sommes lundi"
-        run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK!"
+        run: echo "$Popp $First. Nous sommes $DAY!"
         env:
-          First: $First_Name
+          First: ${{ vars.First_Name }}
