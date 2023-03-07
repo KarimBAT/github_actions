@@ -14,7 +14,4 @@ jobs:
           python3 -V
           touch my_file_with_workflow.py
           ls -la
-<<<<<<< HEAD
           pwd
-=======
->>>>>>> faaa231c09d8e59ce2b5320aee4240c48888c6ad
